@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivCurrencyIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_bitcoin" />
+
+    <TextView
+        android:id="@+id/tvCurrencySym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvCurrencyName"
+        app:layout_constraintStart_toEndOf="@+id/ivCurrencyIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivCurrencyIcon"
+        tools:text="BAT" />
+
+    <TextView
+        android:id="@+id/tvCurrencyName"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tvCurrencySym"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrencySym"
+        tools:text="Basic Attention Token" />
+
+    <TextView
+        android:id="@+id/tvCurrencyMarketCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCurrencySym"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvCurrencySym"
+        tools:text="$ 278839000" />
+
+    <TextView
+        android:id="@+id/tvCurrencyPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvCurrencyName"
+        tools:text="14.4545" />
+
+    <TextView
+        android:id="@+id/tvMarketCapRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Market Cap "
+        app:layout_constraintBottom_toBottomOf="@+id/tvCurrencyMarketCap"
+        app:layout_constraintEnd_toStartOf="@+id/tvCurrencyMarketCap"
+        app:layout_constraintTop_toTopOf="@+id/tvCurrencyMarketCap"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Price $ "
+        app:layout_constraintBottom_toBottomOf="@+id/tvCurrencyPrice"
+        app:layout_constraintEnd_toStartOf="@+id/tvCurrencyPrice"
+        app:layout_constraintTop_toTopOf="@+id/tvCurrencyPrice"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
