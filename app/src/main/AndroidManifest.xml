@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bubal93.tcrypto">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".di.App"
         android:allowBackup="true"
@@ -12,8 +14,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.AboutActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".MainActivity">
+            android:parentActivityName=".activities.MainActivity"></activity>
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

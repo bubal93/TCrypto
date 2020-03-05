@@ -1,7 +1,7 @@
 package com.bubal93.tcrypto.adapter
 
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
+import android.support.v7.widget.RecyclerView
 
 //abstract base adapter class
 abstract class BaseAdapter<VH : BaseAdapter.BaseViewHolder> : RecyclerView.Adapter<VH>() {

@@ -1,6 +1,6 @@
 package com.bubal93.tcrypto.activities
 
-import androidx.appcompat.app.AppCompatActivity
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.bubal93.tcrypto.R
 

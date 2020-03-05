@@ -7,12 +7,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 28
     buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.bubal93.tcrypto"
-        minSdkVersion 23
-        targetSdkVersion 29
+        minSdkVersion 17
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -30,15 +30,13 @@ ext.daggerVersion = '2.11'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //Gson
     implementation 'com.google.code.gson:gson:2.8.5'
@@ -51,9 +49,14 @@ dependencies {
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.8.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
-
-    //dagger
+    //Dagger
     implementation "com.google.dagger:dagger:$daggerVersion"
     kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    //MPAndroidChart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
 
 }

@@ -1,6 +1,9 @@
 package com.bubal93.tcrypto.di
 
-import com.bubal93.tcrypto.MainActivity
+import com.bubal93.tcrypto.activities.MainActivity
+import com.bubal93.tcrypto.fragments.CurrenciesListFragment
+import com.bubal93.tcrypto.mvp.presenter.CurrenciesPresenter
+import com.bubal93.tcrypto.mvp.presenter.LatestChartPresenter
 import dagger.Component
 import javax.inject.Singleton
 
@@ -12,5 +15,12 @@ import javax.inject.Singleton
 )
 @Singleton
 interface AppComponent {
+
     fun inject(mainActivity: MainActivity)
+
+    fun inject(fragment: CurrenciesListFragment)
+
+    fun inject(presenter: CurrenciesPresenter)
+    fun inject(presenter: LatestChartPresenter)
+
 }
