@@ -46,7 +46,8 @@
         android:layout_marginTop="16dp"
         android:text="@string/market_cap_rank_text"
         app:layout_constraintStart_toEndOf="@+id/ivCurrencyDetailIcon"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/marketCapChange"

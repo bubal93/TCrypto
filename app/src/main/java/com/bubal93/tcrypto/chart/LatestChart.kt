@@ -93,8 +93,8 @@ class LatestChart {
         set.lineWidth = 1.8f
         set.circleRadius = 4f
         set.setCircleColor(Color.BLACK)
-        set.highlightLineWidth = 1.2f
-        set.highLightColor = context.resources.getColor(R.color.colorAccent)
+        set.highlightLineWidth = 1.5f
+        set.highLightColor = context.resources.getColor(R.color.colorAccentDark)
         set.color = Color.GREEN
         set.fillColor = Color.GRAY
         set.enableDashedHighlightLine(10f, 5f, 0f)
