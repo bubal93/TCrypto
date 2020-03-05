@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import com.bubal93.tcrypto.R
 import com.bubal93.tcrypto.adapter.BaseAdapter

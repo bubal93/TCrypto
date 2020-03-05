@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivCurrencyDetailIcon"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/chartCurrency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressChart"
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/ic_bitcoin" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chartCurrency"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvMarketCapChange"
+        app:layout_constraintTop_toTopOf="@+id/progressChart" />
+
+    <ProgressBar
+        android:id="@+id/progressChart"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:padding="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvMarketCapChange"
+        tools:background="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/marketCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/market_cap_rank_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCurrencyDetailIcon" />
+
+    <TextView
+        android:id="@+id/marketCapChange"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/mc_hange_in_24h_text"
+        app:layout_constraintStart_toStartOf="@+id/marketCap"
+        app:layout_constraintTop_toBottomOf="@+id/marketCap" />
+
+    <TextView
+        android:id="@+id/ath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/all_time_high_ath_text"
+        app:layout_constraintStart_toStartOf="@+id/marketCap"
+        app:layout_constraintTop_toBottomOf="@+id/marketCapChange" />
+
+    <TextView
+        android:id="@+id/athChangePercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/ath_change_text"
+        app:layout_constraintStart_toStartOf="@+id/marketCap"
+        app:layout_constraintTop_toBottomOf="@+id/ath" />
+
+    <TextView
+        android:id="@+id/circulatingSupply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/circulating_supply_text"
+        app:layout_constraintStart_toStartOf="@+id/marketCap"
+        app:layout_constraintTop_toBottomOf="@+id/athChangePercentage" />
+
+    <TextView
+        android:id="@+id/totalSupply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="@string/total_supply_text"
+        app:layout_constraintStart_toStartOf="@+id/marketCap"
+        app:layout_constraintTop_toBottomOf="@+id/circulatingSupply" />
+
+    <TextView
+        android:id="@+id/tvDetailMarketCapRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/marketCap"
+        app:layout_constraintTop_toBottomOf="@+id/ivCurrencyDetailIcon" />
+
+    <TextView
+        android:id="@+id/tvMarketCapChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/marketCapChange"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailMarketCapRank" />
+
+    <TextView
+        android:id="@+id/tvATH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/ath"
+        app:layout_constraintTop_toBottomOf="@+id/tvMarketCapChange" />
+
+    <TextView
+        android:id="@+id/tvAthChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/athChangePercentage"
+        app:layout_constraintTop_toBottomOf="@+id/tvATH" />
+
+    <TextView
+        android:id="@+id/tvCirculatingSupply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/circulatingSupply"
+        app:layout_constraintTop_toBottomOf="@+id/tvAthChange" />
+
+    <TextView
+        android:id="@+id/tvTotalSupply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toEndOf="@+id/totalSupply"
+        app:layout_constraintTop_toBottomOf="@+id/tvCirculatingSupply" />
+
+</android.support.constraint.ConstraintLayout>
