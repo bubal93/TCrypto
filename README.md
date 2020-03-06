@@ -1,15 +1,15 @@
 # TCrypto
-
-## Description
 A cryptocurrencies Android app written in Kotlin.
 
+## Features
 - list of top cryptocurrencies by market capitalization
 - cryptocurrency detail stats
+- cryptocurrency market cap interactive graph
 
 ## Tech Stack
 - Kotlin
 - RxJava
-- MVP pattern
+- MVP architecture
 - Dependency Injection with Dagger 2
 - Data from CoinGecko API with Gson and Retrofit
 - Glide for images
